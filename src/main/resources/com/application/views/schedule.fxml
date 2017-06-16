@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXToggleNode?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<View maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="350.0" stylesheets="@schedule.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.control.ScheduleController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15">
+         <children>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="350.0" spacing="30.0">
+               <children>
+                  <Label fx:id="indication" text="Scheduled to turn Off  :" />
+                  <JFXToggleNode fx:id="wifinode" onAction="#act" styleClass="wifi-icon">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="wifi" glyphName="WIFI" size="2em" styleClass="icon" />
+                     </graphic>
+                  </JFXToggleNode>
+               </children>
+            </HBox>
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="60" prefHeight="147.0" prefWidth="350.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="51.0" prefWidth="346.0" spacing="20.0">
+                     <children>
+                        <Label text="From :" />
+                        <JFXTimePicker fx:id="from" />
+                     </children>
+                  </HBox>
+                  <Region prefHeight="41.0" prefWidth="200.0" />
+                  <HBox alignment="CENTER" prefHeight="51.0" prefWidth="346.0" spacing="20.0">
+                     <children>
+                        <Label text="To :" />
+                        <JFXTimePicker fx:id="to" />
+                     </children>
+                  </HBox>
+               </children>
+            </FlowPane>
+            <JFXButton fx:id="start" onAction="#start" text="Start">
+              <graphic>
+                    
+
+              </graphic>
+            </JFXButton>
+         </children></VBox>
+   </center>
+</View>
