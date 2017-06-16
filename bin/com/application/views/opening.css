@@ -1,0 +1,15 @@
+
+@font-face{
+    font-family:Mogra;
+    src:url("Mogra.ttf");
+}
+
+
+.jfx-button
+{	
+ -fx-background-color:  #3f51b5 ;
+     -fx-text-fill:white;
+	-fx-font-family:Mogra;
+	-fx-font-size:15px;
+}
+
