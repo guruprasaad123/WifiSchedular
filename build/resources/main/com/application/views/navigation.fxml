@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+
+<ListView prefHeight="560.0" prefWidth="280.0" stylesheets="@nav.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+
+         <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="250.0" spacing="20">
+         <children>
+            <FontAwesomeIconView fx:id="home_icon" glyphName="HOME" size="25.0" />
+            <Label fx:id="home" text="HOME" />
+         </children>
+       </HBox>
+
+ <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="250.0" spacing="15.0">
+         <children>
+            <FontAwesomeIconView glyphName="WIFI" size="25.0" />
+         <Label text="Schedule" />
+            
+         </children>
+       </HBox>
+
+       
+ <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="250.0" spacing="20">
+         <children>
+            <FontAwesomeIconView glyphName="CLOSE" size="25.0" />
+            <Label fx:id="exit" text="EXIT" />
+         </children>
+       </HBox>
+       
+</ListView>
