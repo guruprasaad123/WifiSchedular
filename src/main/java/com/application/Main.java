@@ -1,4 +1,5 @@
 package com.application;
+
 import java.io.IOException;
 
 import com.application.control.MainController;
@@ -7,7 +8,8 @@ import com.gluonhq.charm.glisten.mvc.View;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXSnackbar;
 import com.jfoenix.controls.JFXSnackbar.SnackbarEvent;
-
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.KeyCode;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
@@ -34,18 +36,18 @@ public class Main extends javafx.application.Application
 	
 		
 	try {
+	
 		Rectangle2D visual=Screen.getPrimary().getVisualBounds();
 		FXMLLoader loader=new FXMLLoader(getClass().getResource("Home.fxml"));
 		View view=(View)loader.load();
 		MainController controller=(MainController)loader.getController();
 			
-		
+		controller.setStage(PrimaryStage);
 		JFXSnackbar snackbar=new JFXSnackbar(view);
 		//snackbar.enqueue(new SnackbarEvent("Notification Msg"));
 		snackbar.setPrefHeight(50);
 		snackbar.setPrefWidth(350);
-		snackbar.enqueue(new SnackbarEvent("Welcome", "view", 10000, false, null));
-	
+		
 		
 		Scene scene=null;
 		if(Platform.isAndroid())
@@ -53,14 +55,24 @@ public class Main extends javafx.application.Application
 			
 		else
 		scene=new Scene(view,350,575);
+		
 		scene.setOnSwipeLeft(action -> {
 			controller.showPopUp();
 		}
 		);
 		
+		
+		scene.addEventHandler(KeyEvent.KEY_RELEASED, e->{
+           if(KeyCode.ESCAPE.equals(e.getCode()))
+           {
+        	   PrimaryStage.close();
+           }
+		});
+		
 		PrimaryStage.setResizable(false);
 		PrimaryStage.setScene(scene);
 		PrimaryStage.show();
+		
 		
 	} 
 	catch (IOException e) 
@@ -68,11 +80,6 @@ public class Main extends javafx.application.Application
 		e.printStackTrace();
 	}
 	
-		
-		
-		
 	}
-	
-	
 	
 }
