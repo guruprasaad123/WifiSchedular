@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.scene.layout.VBox?>
+
+<View maxHeight="-Infinity" maxWidth="-Infinity" fx:id="view" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="350.0" stylesheets="@opening.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.control.OpeningController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20">
+         <children>
+            <JFXButton fx:id="schedule" text="Schedule">
+               <graphic>
+                  <MaterialIconView fx:id="icon" glyphName="ADD_ALERT" size="20.0" wrappingWidth="20.0" />
+               </graphic></JFXButton>
+         </children>
+      </VBox>
+   </center>
+</View>

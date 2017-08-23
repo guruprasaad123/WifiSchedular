@@ -1,0 +1,78 @@
+
+@font-face{
+    font-family:Mogra;
+    src:url("Mogra.ttf");
+}
+.label
+{
+	-fx-font-family:Mogra;
+	-fx-font-size:15px;
+}
+
+#home_icon
+{
+	
+	-fx-border-radius:50%;
+}
+
+#mylistview .scroll-bar:horizontal .track,
+#mylistview .scroll-bar:vertical .track{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+ 
+#mylistview .scroll-bar:horizontal .increment-button ,
+#mylistview .scroll-bar:horizontal .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 10 0;
+}
+ 
+#mylistview .scroll-bar:vertical .increment-button ,
+#mylistview .scroll-bar:vertical .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 10 0 0;
+}
+#mylistview  .scroll-bar .increment-arrow,
+#mylistview  .scroll-bar .decrement-arrow{
+    -fx-shape:" ";
+    -fx-padding:0;
+}
+ 
+#mylistview .scroll-bar:horizontal .thumb,
+#mylistview .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(black,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}
+#mylistview .jfx-list-cell:selected
+{
+	-fx-background-color: #00BCD4 ;
+	    -fx-text-fill: black ;
+	    
+}
+
+#mylistview .jfx-list-cell .jfx-rippler
+{
+	-fx-rippler-fill: #E8EAF6;
+}
+
+#mylistview
+{
+	-fx-border-color: white;
+	  -fx-text-fill: black;
+}
+#mylistview .jfx-list-cell
+{
+	-fx-background-color: white;
+	-fx-text-fill:black;
+}
+
+
+
+
+
+

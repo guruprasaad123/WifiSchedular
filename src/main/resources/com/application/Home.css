@@ -1,0 +1,60 @@
+
+@font-face{
+    font-family:Mogra;
+    src:url("Mogra.ttf");
+}
+
+@font-face{
+    font-family:Roboto-Black;
+    src:url("Roboto-Black.ttf");
+}
+@font-face{
+    font-family:NotoSerif-Bold;
+    src:url("NotoSerif-Bold.ttf");
+}
+
+
+.tool-bar
+{
+	/*-fx-background-color:  #3f51b5;
+	*/
+ -fx-background-color: white;
+}
+
+
+.label
+{
+	-fx-font-family: Minimal;
+}
+
+#header
+{
+	
+	-fx-font-family:'Mogra';
+	-fx-font-size:20px;
+  /*   -fx-text-fill:  #e1f5fe;*/
+  
+    
+}
+/* 
+.jfx-button
+{	
+ -fx-background-color:  #3f51b5 ;
+     -fx-text-fill:white;
+	-fx-font-family:Mogra;
+	-fx-font-size:15px;
+	-fx-padding:5px;
+}
+*/
+
+.jfx-snackbar-content {
+    -fx-background-color: #323232;
+    
+}
+.jfx-snackbar-toast {
+    -fx-text-fill: WHITE; 
+ -fx-font-family:'Mogra';
+}
+.jfx-snackbar-action {
+    -fx-text-fill: #ff4081; 
+}

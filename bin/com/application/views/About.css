@@ -1,0 +1,10 @@
+
+@font-face{
+    font-family:Mogra;
+    src:url("Mogra.ttf");
+}
+.label
+{
+	-fx-font-family:Mogra;
+	-fx-font-size:15px;
+}

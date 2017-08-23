@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="box" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Label fx:id="start" text="start" />
+            <Label text="To">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="end" text="end" />
+            <Label fx:id="state" text="OFF" />
+         </children>
+      </HBox>
+      <MaterialIconView fx:id="delete" glyphName="DELETE" onMousePressed="#delete" size="35" wrappingWidth="39.0" />
+      <MaterialIconView glyphName="EDIT" size="35.0" />
+   </children>
+</HBox>

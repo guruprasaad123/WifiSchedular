@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+
+<View fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="360.0" stylesheets="@Home.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.control.MainController">
+   <top>
+      <ToolBar prefHeight="60.0" prefWidth="360.0" View.alignment="CENTER">
+         <items>
+            <JFXHamburger fx:id="nav" />
+            <Label fx:id="header" text="HOME">
+
+            </Label>
+         </items>
+      </ToolBar>
+   </top>
+</View>

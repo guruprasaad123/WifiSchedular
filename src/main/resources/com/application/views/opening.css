@@ -1,0 +1,31 @@
+
+@font-face{
+    font-family:Mogra;
+    src:url("Mogra.ttf");
+}
+
+.view{
+-fx-background-image: url("space-nature.jpg") ;	
+-fx-background-radius: 0.0% ;
+-fx-background-position: center ;
+
+-fx-background-repeat: no-repeat ;
+}
+
+.opening{
+	-fx-background-image: url("com/application/views/space-nature.jpg") ;	
+-fx-background-radius: 0.0% ;
+-fx-background-insets: 10px; 
+-fx-background-repeat: no-repeat ;
+}
+
+.jfx-button
+{	
+	-fx-padding:10px;
+ -fx-background-color:  #3f51b5 ;
+     -fx-text-fill:white;
+	-fx-font-family:Mogra;
+	-fx-font-size:15px;
+
+}
+
