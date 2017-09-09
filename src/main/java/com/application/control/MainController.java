@@ -13,7 +13,6 @@ import com.application.views.ScheduleView;
 import com.gluonhq.charm.glisten.mvc.View;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.controls.JFXListView;
-
 import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -103,7 +102,7 @@ final String SCHEDULAR_VIEW ="SCHEDULAR_VIEW";
 	});
 
 	nav.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) -> {
-		//System.out.println("popover");
+		
 		if(slider.isPopoverVisible())
 		{
 			slider.hidePopover();

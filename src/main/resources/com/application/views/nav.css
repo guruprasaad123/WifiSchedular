@@ -50,7 +50,7 @@
 }
 #mylistview .jfx-list-cell:selected
 {
-	-fx-background-color: #00BCD4 ;
+	-fx-background-color: #0078d7 ;
 	    -fx-text-fill: black ;
 	    
 }

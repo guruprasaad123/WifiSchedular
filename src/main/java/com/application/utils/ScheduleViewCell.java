@@ -41,6 +41,10 @@ public class ScheduleViewCell extends ListCell<Schedules>
         end.setText(student.getEndTime());
         state.setText(student.getState().toString());
 		
+        delete.setOnKeyPressed((e)->{
+        System.out.println("Delete");	
+        });
+        
         
         setGraphic(box);
         setText(null);

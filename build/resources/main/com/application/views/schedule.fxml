@@ -46,13 +46,13 @@
             </FlowPane>
             <HBox alignment="CENTER" prefHeight="52.0" prefWidth="350.0">
                <children>
-                  <JFXCheckBox text="S" />
-                  <JFXCheckBox text="M" />
-                  <JFXCheckBox text="T" />
-                  <JFXCheckBox text="W" />
-                  <JFXCheckBox text="TH" />
-                  <JFXCheckBox text="F" />
-                  <JFXCheckBox text="SA" />
+                  <JFXCheckBox fx:id="sunday" text="S" selected="true" />
+                  <JFXCheckBox  fx:id="monday" text="M"  selected="true"  />
+                  <JFXCheckBox  fx:id="tuesday" text="T" selected="true"  />
+                  <JFXCheckBox  fx:id="wednesday" text="W" selected="true"  />
+                  <JFXCheckBox  fx:id="thrusday" text="T" selected="true"  />
+                  <JFXCheckBox  fx:id="friday" text="F" selected="true"  />
+                  <JFXCheckBox  fx:id="saturday" text="S" selected="true"  />
                </children>
             </HBox>
             <JFXBadge prefHeight="0.0" prefWidth="350.0" text="1">

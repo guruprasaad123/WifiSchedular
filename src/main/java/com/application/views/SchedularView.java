@@ -17,12 +17,13 @@ public class SchedularView {
 	    public View getView() {
 	        try {
 	        	FXMLLoader loader=new FXMLLoader(getClass().getResource("ScheduleList.fxml"));
-	            View view = loader.load();
+	            View view = (View)loader.load();
 	         
 	            view.setName(name);
 	            return view;
 	        } catch (IOException e) {
 	            System.out.println("IOException: " + e);
+	          e.printStackTrace();
 	            return new View(name);
 	        }
 	    }

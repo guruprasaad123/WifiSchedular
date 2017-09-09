@@ -40,7 +40,7 @@ public class Schedular  implements Schedule{
 
 	}
 	
-	public void Startschedule(int time,String message)
+	public void startSchedule(int time,String message)
 	{
 		
 	
@@ -59,7 +59,7 @@ public class Schedular  implements Schedule{
 	}
 	
 	
-	public void Endschedule(int time,String message)
+	public void endSchedule(int time,String message)
 	{
 		
 		String id="56789"+count++;
@@ -72,7 +72,7 @@ public class Schedular  implements Schedule{
 		
 	    manager.setExact(AlarmManager.RTC_WAKEUP,SystemClock.elapsedRealtime()+time,pIntent);
 	
-	 
+	// manager.setInexactRepeating(AlarmManager.RTC_WAKEUP, , intervalMillis, operation);
 	}
 	
 	  private  Notification getNotification(Intent intent,String message)

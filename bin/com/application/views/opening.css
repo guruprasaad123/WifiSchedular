@@ -5,11 +5,14 @@
 }
 
 .view{
+	/* 
 -fx-background-image: url("space-nature.jpg") ;	
 -fx-background-radius: 0.0% ;
 -fx-background-position: center ;
 
 -fx-background-repeat: no-repeat ;
+*
+*/
 }
 
 .opening{

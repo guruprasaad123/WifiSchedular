@@ -14,6 +14,8 @@ import com.gluonhq.charm.down.Services;
 import com.gluonhq.charm.down.plugins.LocalNotificationsService;
 import com.gluonhq.charm.down.plugins.Notification;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXCheckBox;
+import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXTimePicker;
 import com.jfoenix.controls.JFXToggleButton;
 import com.jfoenix.controls.JFXToggleNode;
@@ -39,6 +41,7 @@ public class ScheduleController implements Initializable{
 	@FXML JFXTimePicker from,to;
 	@FXML JFXToggleNode wifinode;
 	@FXML Label indication;
+	@FXML JFXCheckBox sunday,monday,tuesday,wednesday,thrusday,friday,saturday;
 	boolean prev;
 	Logger logger=null;
 	int count=0;
@@ -60,37 +63,64 @@ public class ScheduleController implements Initializable{
 					
 	}
 	
+
+	
 	@FXML void start()
 	{
+		
+		LocalTime time_start = from.getValue();
+		LocalTime time_end=to.getValue();
+		
+		
+		
+		if(time_start==null || time_end==null)
+		{
+			Alert alert = new Alert(AlertType.WARNING);
+			alert.setHeaderText("Missing Something");
+			alert.setContentText("Please provide the timing");
+			alert.showAndWait();
 	
+		}
+		else if(time_start.compareTo(time_end) > 0 )
+		{
+			Alert alert = new Alert(AlertType.WARNING);
+			alert.setHeaderText("Syntax Erroe");
+			alert.setContentText("Please provide the correct timing");
+			alert.showAndWait();
+		}
+		
+		else {
+	  
 		try{
 			
-		WifiPermission permission = (WifiPermission)	Class.forName(getPlatformPermission()).newInstance();
-	
-		permission.checkPermissions();
-		
-		Schedule schedule =(Schedule) Class.forName("com.application.Schedular").newInstance();
-		
-		schedule.Startschedule( 2000,"Message 1");
+			System.out.println(	time_start.getHour());
 			
-		schedule.Endschedule(10000, "Da vinci ");
+			System.out.println(	time_end.getHour());
+			
+			System.out.println(time_start.compareTo(time_end));
+			
+		Schedule schedule =(Schedule) Class.forName( getPlatform() ).newInstance();
+       
+	
 		
-		schedule.Endschedule(12000, "Alert 1");
+		Calendar calender =Calendar.getInstance();
+		
+		calender.set(Calendar.HOUR_OF_DAY,time_start.getHour());
 		
 		
+		schedule.startSchedule( 2000,"Message 1");
+			
+		schedule.endSchedule(10000, "Da vinci ");
+		
+		schedule.endSchedule(12000, "Alert 1");
 		
 		//Notify("Success ! ","passed","");
-		
-         
-		
 		
 		 
 	/*	LocalTime starting=	from.getValue();
 	
 		LocalTime ending=	to.getValue();
 
-	
-	
 	boolean wifi=wifinode.isSelected();
 		
 	//NativePlatform platform=(NativePlatform)Class.forName(getPlatform()).newInstance();
@@ -129,12 +159,12 @@ public class ScheduleController implements Initializable{
 			i.printStackTrace();
 			logger.log(Level.SEVERE,"$ $ runtime Exception ",i);
 		}
-		
+		}
 	}
 
     private static String getPlatform() {
         switch ( System.getProperty("javafx.platform", "desktop") ) {
-            case "android": return "com.application.AndroidNative";
+            case "android": return "com.application.Schedular";
             case "ios": return "com.IosPlatform";
             default : return "";
         }
@@ -150,9 +180,7 @@ public class ScheduleController implements Initializable{
            }
 	}
    
-
 	
-
 	TimerTask timer_end()
 	{
 		return new TimerTask(){

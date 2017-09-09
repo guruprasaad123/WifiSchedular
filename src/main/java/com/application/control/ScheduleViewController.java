@@ -6,16 +6,18 @@ import java.util.ResourceBundle;
 
 import com.application.utils.ScheduleViewCell;
 import com.application.utils.Schedules;
+import com.application.utils.Schedules.State;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 public class ScheduleViewController implements Initializable {
 
 	
-	@FXML ListView<Schedules> schedules;
+	@FXML ListView<Schedules> schedulelist;
 	
 	private ObservableList<Schedules> schedules_list;
 	
@@ -28,18 +30,25 @@ public class ScheduleViewController implements Initializable {
 			
 		
 			System.out.println(start);
-			
-			schedules_list.add(new Schedules(start,end,Schedules.State.ON));
-			
-			
 		
+			
+	
 	}
 	@Override
 	public void initialize(URL location, ResourceBundle resources) 
 	{
 		System.out.println("INit");;
-		schedules.setItems(schedules_list);
-		schedules.setCellFactory((e)-> new ScheduleViewCell());
+		schedulelist.setItems(schedules_list);
+		
+		schedules_list.add(new Schedules(LocalTime.now(), LocalTime.now(), State.ON));
+		
+		schedulelist.setCellFactory((e)-> new ScheduleViewCell());
+		
+		schedulelist.addEventHandler(MouseEvent.MOUSE_CLICKED, (e)->{
+			
+			System.out.println(schedulelist.getSelectionModel().getSelectedIndex());
+		}
+		);
 		
        // schedules.setCellFactory(value);
 	}

@@ -19,7 +19,7 @@
             <Label fx:id="state" text="OFF" />
          </children>
       </HBox>
-      <MaterialIconView fx:id="delete" glyphName="DELETE" onMousePressed="#delete" size="35" wrappingWidth="39.0" />
-      <MaterialIconView glyphName="EDIT" size="35.0" />
+      <MaterialIconView fx:id="delete" glyphName="DELETE"  size="35" wrappingWidth="39.0" />
+      <MaterialIconView glyphName="EDIT" size="35"/>
    </children>
 </HBox>

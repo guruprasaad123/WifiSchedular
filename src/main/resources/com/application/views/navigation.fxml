@@ -17,7 +17,7 @@
          </children>
        </HBox>
           
- 		<HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="252.0" spacing="15.0">
+ 		<HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="250.0" spacing="15.0">
          <children>
             <MaterialIconView glyphName="NETWORK_WIFI" size="25.0" wrappingWidth="27.0" />
          <Label text="Schedule" />
